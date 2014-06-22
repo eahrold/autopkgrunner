@@ -141,7 +141,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Eldon Ahrold";
 			};
-			buildConfigurationList = BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkg-scheduler" */;
+			buildConfigurationList = BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkgrunner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,6 +279,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD73D3CC9499422FABAAE629 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "autopkgrunner/autopkgrunner-Prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -290,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD73D3CC9499422FABAAE629 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "autopkgrunner/autopkgrunner-Prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -300,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkg-scheduler" */ = {
+		BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkgrunner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE202A2519505C29005875E1 /* Debug */,

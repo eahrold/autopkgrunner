@@ -68,4 +68,8 @@ NSString* autopkg = @"/usr/local/bin/autopkg";
     return nil;
 }
 
++(BOOL)repoUpdate{
+    return [[self class]runAutoPkgwithArgs:@[@"repo-update", @"all"] output:nil error:nil];
+}
+
 @end

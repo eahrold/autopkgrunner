@@ -9,7 +9,6 @@
 #import "APRrecipes.h"
 #import "APRautopkg.h"
 #import "APRError.h"
-static NSString* AppPreferenceDomain = @"com.github.autopkgrunner";
 
 @implementation APRrecipes
 

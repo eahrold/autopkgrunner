@@ -14,7 +14,7 @@
 
 #import "AHLaunchCtl.h"
 
-const char* current_version = "0.1.0";
+const char* current_version = "0.1.1";
 static NSString* label = @"com.github.autopkgrunner.schedule";
 
 OSStatus run()
@@ -24,6 +24,10 @@ OSStatus run()
         return 127;
     }
 
+    if([[NSUserDefaults standardUserDefaults] boolForKey:kRepoUpdate]){
+        [APRautopkg repoUpdate];
+    }
+    
     NSError* error;
     BOOL runError = NO;
     NSArray* recipes = [APRrecipes scheduledRecipes];
@@ -45,6 +49,14 @@ OSStatus run()
     return runError ? (int)error.code : 0;
 }
 
+void toggle_repo_update(){
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL update_repo = [ defaults boolForKey:kRepoUpdate];
+    update_repo = !update_repo;
+    [defaults setBool:update_repo forKey:kRepoUpdate];
+    printf("Automatic repo update %s\n",update_repo ? "ENABLED":"DISABLED");
+    [defaults synchronize];
+}
 
 void schedule(AHLaunchJobSchedule* schedule, NSString* user)
 {
@@ -138,6 +150,8 @@ int usage(int rc)
 
     printf("  -r, --remove=RECIPE     remove a recipe from the run schedule,can be specified more than once\n");
     printf("  -u, --user=USERNAME     set the schedule to run as a specific user\n");
+    printf("  -g, --update-repo       toggle on/off automatically updating autopkg recipe repos\n");
+
     printf("  -d, --schedule-daily    schedule autopkgrunner to run daily at 7:00AM\n");
     printf("  -w, --schedule-weekly   schedule autopkgrunner to run weekly on Mondays at 7:00AM\n");
     printf("  -c, --clear-schedule    stop running at scheduled intervals\n");
@@ -166,6 +180,9 @@ int main(int argc, char* argv[])
 
     @autoreleasepool
     {
+        
+        [[NSUserDefaults standardUserDefaults]registerDefaults:@{kRepoUpdate: @YES}];
+        
         int c;
         
         BOOL
@@ -176,7 +193,7 @@ int main(int argc, char* argv[])
         add_recipe = NO,
         remove_recipe = NO,
         install = NO;
-
+        
         NSError* error = nil;
         NSString* user = nil;
 
@@ -190,6 +207,7 @@ int main(int argc, char* argv[])
             { "add", required_argument, NULL, 'a' },
             { "key", required_argument, NULL, 'k' },
             { "remove", required_argument, NULL, 'r' },
+            { "update-repo", no_argument, NULL, 'g' },
             { "schedule-daily", no_argument, NULL, 'd' },
             { "schedule-weekly", no_argument, NULL, 'w' },
             { "clear-schedule", no_argument, NULL, 'c' },
@@ -201,7 +219,7 @@ int main(int argc, char* argv[])
             { NULL, 0, 0, 0 } // NULL row to catch anything unknown.
         };
 
-        while ((c = getopt_long(argc, argv, "?hvxliu:a:r:", longopts, NULL)) != -1) {
+        while ((c = getopt_long(argc, argv, "?hvgxliu:a:r:", longopts, NULL)) != -1) {
             switch (c) {
             case 'x':
                 return run();
@@ -240,6 +258,9 @@ int main(int argc, char* argv[])
             case 'c':
                 remove_schedule = YES;
                 break;
+            case 'g':
+                toggle_repo_update();
+                return 0;
             case 'i':
                 install = YES;
                 break;

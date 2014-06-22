@@ -11,4 +11,5 @@
 + (BOOL)runRecipe:(NSString*)recipe error:(NSError**)error;
 + (BOOL)runRecipe:(NSString*)recipe withArgs:(NSArray*)args error:(NSError**)error;
 + (NSArray*)avaliableRecipes;
++ (BOOL)repoUpdate;
 @end
