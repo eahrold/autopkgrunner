@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5891B9DC6C4F519DC80671 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCF0219EC6346A6A54303D4 /* libPods.a */; };
 		BE202A1D19505C29005875E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE202A1C19505C29005875E1 /* Foundation.framework */; };
 		BE202A2019505C29005875E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE202A1F19505C29005875E1 /* main.m */; };
-		BE202A2419505C29005875E1 /* autopkgrunner.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE202A2319505C29005875E1 /* autopkgrunner.1 */; };
+		BE202A2C19505CB8005875E1 /* APRrecipes.m in Sources */ = {isa = PBXBuildFile; fileRef = BE202A2B19505CB8005875E1 /* APRrecipes.m */; };
+		BE202A2F195064B7005875E1 /* APRautopkg.m in Sources */ = {isa = PBXBuildFile; fileRef = BE202A2E195064B7005875E1 /* APRautopkg.m */; };
+		BEC1EADA1951C8B700037878 /* APRError.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC1EAD91951C8B700037878 /* APRError.m */; };
+		BEFF64E31950DD1A009212F6 /* NSFileHandle+writeToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFF64E21950DD1A009212F6 /* NSFileHandle+writeToFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,18 +23,26 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				BE202A2419505C29005875E1 /* autopkgrunner.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6BCF0219EC6346A6A54303D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE202A1919505C29005875E1 /* autopkgrunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = autopkgrunner; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE202A1C19505C29005875E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE202A1F19505C29005875E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE202A2219505C29005875E1 /* autopkgrunner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "autopkgrunner-Prefix.pch"; sourceTree = "<group>"; };
-		BE202A2319505C29005875E1 /* autopkgrunner.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = autopkgrunner.1; sourceTree = "<group>"; };
+		BE202A2A19505CB8005875E1 /* APRrecipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRrecipes.h; sourceTree = "<group>"; };
+		BE202A2B19505CB8005875E1 /* APRrecipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRrecipes.m; sourceTree = "<group>"; };
+		BE202A2D195064B7005875E1 /* APRautopkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRautopkg.h; sourceTree = "<group>"; };
+		BE202A2E195064B7005875E1 /* APRautopkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRautopkg.m; sourceTree = "<group>"; };
+		BEC1EAD81951C8B700037878 /* APRError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRError.h; sourceTree = "<group>"; };
+		BEC1EAD91951C8B700037878 /* APRError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRError.m; sourceTree = "<group>"; };
+		BEFF64E11950DD1A009212F6 /* NSFileHandle+writeToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+writeToFile.h"; sourceTree = "<group>"; };
+		BEFF64E21950DD1A009212F6 /* NSFileHandle+writeToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+writeToFile.m"; sourceTree = "<group>"; };
+		CD73D3CC9499422FABAAE629 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE202A1D19505C29005875E1 /* Foundation.framework in Frameworks */,
+				3F5891B9DC6C4F519DC80671 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +64,7 @@
 				BE202A1E19505C29005875E1 /* autopkgrunner */,
 				BE202A1B19505C29005875E1 /* Frameworks */,
 				BE202A1A19505C29005875E1 /* Products */,
+				CD73D3CC9499422FABAAE629 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				BE202A1C19505C29005875E1 /* Foundation.framework */,
+				6BCF0219EC6346A6A54303D4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,7 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				BE202A1F19505C29005875E1 /* main.m */,
-				BE202A2319505C29005875E1 /* autopkgrunner.1 */,
+				BE202A2A19505CB8005875E1 /* APRrecipes.h */,
+				BE202A2B19505CB8005875E1 /* APRrecipes.m */,
+				BE202A2D195064B7005875E1 /* APRautopkg.h */,
+				BE202A2E195064B7005875E1 /* APRautopkg.m */,
+				BEC1EAD81951C8B700037878 /* APRError.h */,
+				BEC1EAD91951C8B700037878 /* APRError.m */,
 				BE202A2119505C29005875E1 /* Supporting Files */,
 			);
 			path = autopkgrunner;
@@ -83,6 +103,8 @@
 		BE202A2119505C29005875E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEFF64E11950DD1A009212F6 /* NSFileHandle+writeToFile.h */,
+				BEFF64E21950DD1A009212F6 /* NSFileHandle+writeToFile.m */,
 				BE202A2219505C29005875E1 /* autopkgrunner-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -95,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE202A2719505C29005875E1 /* Build configuration list for PBXNativeTarget "autopkgrunner" */;
 			buildPhases = (
+				12FDB15AA7A5443F908EF302 /* Check Pods Manifest.lock */,
 				BE202A1519505C29005875E1 /* Sources */,
 				BE202A1619505C29005875E1 /* Frameworks */,
 				BE202A1719505C29005875E1 /* CopyFiles */,
+				811C640F096241648BFD2FBE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,7 +141,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Eldon Ahrold";
 			};
-			buildConfigurationList = BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkgrunner" */;
+			buildConfigurationList = BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkg-scheduler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -134,12 +158,49 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12FDB15AA7A5443F908EF302 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		811C640F096241648BFD2FBE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE202A1519505C29005875E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BE202A2019505C29005875E1 /* main.m in Sources */,
+				BE202A2F195064B7005875E1 /* APRautopkg.m in Sources */,
+				BEC1EADA1951C8B700037878 /* APRError.m in Sources */,
+				BE202A2C19505CB8005875E1 /* APRrecipes.m in Sources */,
+				BEFF64E31950DD1A009212F6 /* NSFileHandle+writeToFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,18 +277,22 @@
 		};
 		BE202A2819505C29005875E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD73D3CC9499422FABAAE629 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "autopkgrunner/autopkgrunner-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		BE202A2919505C29005875E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD73D3CC9499422FABAAE629 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "autopkgrunner/autopkgrunner-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,7 +300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkgrunner" */ = {
+		BE202A1419505C29005875E1 /* Build configuration list for PBXProject "autopkg-scheduler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE202A2519505C29005875E1 /* Debug */,
@@ -251,6 +316,7 @@
 				BE202A2919505C29005875E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

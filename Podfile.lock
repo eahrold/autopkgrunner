@@ -1,0 +1,10 @@
+PODS:
+  - AHLaunchCtl (0.1.1)
+
+DEPENDENCIES:
+  - AHLaunchCtl (~> 0.1.1)
+
+SPEC CHECKSUMS:
+  AHLaunchCtl: 3f4ad0fdaef68e37bef894874b96ebef2d02fa92
+
+COCOAPODS: 0.33.1
