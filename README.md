@@ -40,7 +40,7 @@ Schedule is controlled by launchd and a file named com.github.autopkgrunner.sche
 
 By default autopkgrunner updates all recipe repos, you can toggle this feature by running
 
-	sudo /usr/local/sbin/autopkgrunner --update-repo
+	/usr/local/sbin/autopkgrunner --update-repo
     
 
 ###Full Usage:
@@ -48,7 +48,7 @@ By default autopkgrunner updates all recipe repos, you can toggle this feature b
 Usage: /usr/local/sbin/autopkgrunner [options]
 
 Options:
-  -i, --install           install autopkgrunner to /usr/local/sbin/
+  -i, --install           install autopkgrunner to /usr/local/sbin/ (requires sudo)
   -x, --run               run all of the scheduled recipes
   -l, --list              list currently scheduled recipes
   -a, --add=RECIPE        add a recipe to the run schedule, 
@@ -65,14 +65,15 @@ Options:
   -g, --update-repo       toggle on/off automatically updating 
                           autopkg recipe repos
                           
-  -c, --clear-schedule    stop running at scheduled intervals
+  -c, --clear-schedule    stop running at scheduled intervals (requires sudo)
 
-  -d, --schedule-daily    schedule autopkgrunner to run daily at 7:00AM
+  -d, --schedule-daily    schedule autopkgrunner to run daily at 7:00AM (requires sudo)
   -w, --schedule-weekly   schedule autopkgrunner to run weekly on
-                          Mondays at 7:00AM
+                          Mondays at 7:00AM (requires sudo)
                           
   -v, --version 
   -h, --usage
+
 
 ```
 
